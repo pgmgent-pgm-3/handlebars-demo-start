@@ -24,6 +24,7 @@ $ npm run start:dev
 - [Mustache](https://mustache.github.io/)
 - [Handlebars](https://handlebarsjs.com/)
 - [Templating Engines with Handlebars Video Playlist](https://www.youtube.com/playlist?list=PLEANi5V6VM1fYCfRkdz6StvvdpRwTOfVg)
+- [Handlebars Cookbook](https://zordius.github.io/HandlebarsCookbook/)
 
 ## Authors
 - Tim De Paepe
