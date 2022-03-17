@@ -11,6 +11,8 @@ This project is part of the course Programming 3 at Arteveldehogeschool Gent. Th
 $ npm install
 ```
 
+**Note:** normally we **do not** include a .env file, ONLY because this is a demo we included the file.
+
 ## Running the App
 
 ```bash
