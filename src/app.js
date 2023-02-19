@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 // serve static files from the public folder
-// they can be accessed from the root of the site (e.g. /assets/images/logo.png)
+// they can be accessed from the root of the site (e.g. /assets/images/dino_07.png) 🦕
 app.use(express.static("public"));
 
 // GET route to serve the index.html file
