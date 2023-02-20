@@ -1,12 +1,12 @@
 <!-- navigation -->
 <nav>
     <ul>
-        <li>
-            <a href="/">Home</a> 
-        </li>
-        <li>
-            <a href="/friends">Friends</a> 
-        </li>
+        {{#each nav}}
+            <li>
+                <a href="{{ link }}" target="{{ target }}">
+                    {{ name }}
+                </a>
+            </li>
+        {{/each}}
     </ul>
-    
 </nav>

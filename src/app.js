@@ -54,6 +54,18 @@ app.get("/", (req, res) => {
         image: "/assets/images/dino_03.png",
       },
     ],
+    nav: [
+      {
+        name: "Home",
+        link: "/",
+        target: "_self",
+      },
+      {
+        name: "Friends",
+        link: "/friends",
+        target: "_blank",
+      },
+    ],
   };
   res.render("home", data);
 });
