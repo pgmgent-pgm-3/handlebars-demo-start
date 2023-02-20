@@ -16,6 +16,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.resolve("src", "views", "index.html"));
 });
 
+app.get("/trex", (req, res) => {
+  res.sendFile(path.resolve("src", "views", "bronto.html"));
+});
+
 // start the server, listen on port defined in .env file
 app.listen(process.env.PORT, () => {
   // callback function that is called when the server starts
