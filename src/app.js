@@ -26,7 +26,36 @@ app.set("views", path.join(SOURCE_PATH, "views"));
 
 // GET route to serve the index.html file
 app.get("/", (req, res) => {
-  res.render("home");
+  const data = {
+    firstname: "Timmy",
+    motto: "<strong>I love dinosaurs so much</strong>",
+    person: {
+      firstname: "Freddy",
+      lastname: "Rogers",
+    },
+    partner: {
+      firstname: "Chantal",
+      lastname: "Decker",
+    },
+    friends: [
+      {
+        name: "T-Rexxy",
+        age: 1000000000,
+        image: "/assets/images/dino_01.png",
+      },
+      {
+        name: "Pterodactyl",
+        age: 233,
+        image: "/assets/images/dino_02.png",
+      },
+      {
+        name: "Stegosaurus",
+        age: 1000000000,
+        image: "/assets/images/dino_03.png",
+      },
+    ],
+  };
+  res.render("home", data);
 });
 
 app.get("/trex", (req, res) => {
