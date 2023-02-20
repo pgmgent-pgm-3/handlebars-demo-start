@@ -3,6 +3,8 @@ import express from "express";
 import path from "path";
 import dotenv from "dotenv";
 dotenv.config();
+import { create } from "express-handlebars";
+import { SOURCE_PATH } from "./constants.js";
 
 // create an instance of express
 const app = express();
@@ -11,9 +13,20 @@ const app = express();
 // they can be accessed from the root of the site (e.g. /assets/images/dino_07.png) 🦕
 app.use(express.static("public"));
 
+// ----------------- HANDLEBARS ----------------- //
+const hbs = create({
+  extname: "hbs",
+});
+
+app.engine("hbs", hbs.engine);
+app.set("view engine", "hbs");
+app.set("views", path.join(SOURCE_PATH, "views"));
+
+// ----------------- ROUTES ----------------- //
+
 // GET route to serve the index.html file
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve("src", "views", "index.html"));
+  res.render("home");
 });
 
 app.get("/trex", (req, res) => {
