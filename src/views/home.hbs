@@ -24,6 +24,7 @@
     <ul>
         {{#each friends}}
             <li>
+
                 <h3>{{ name }}</h3>
 
                 {{#em}}
@@ -41,6 +42,11 @@
                 {{#unless name}}
                     <h3>Unknown</h3>
                 {{/unless}}
+
+                {{#if name}}
+                    <h3>{{ name }}</h3>
+                {{/if}}
+
                 <p>Age: {{ age }}</p>
                 <img src="{{ image }}" alt="{{ name }}">
             </li>
