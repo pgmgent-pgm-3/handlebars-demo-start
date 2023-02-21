@@ -12,6 +12,7 @@ export default {
   link: (text, url, target) => `<a href="${url}" target="${target}">${text}</a>`,
 
   button: (use, options) => {
+
     const validUse = ["primary", "secondary", "tertiary"];
 
     if(validUse.includes(use)) {
@@ -24,7 +25,23 @@ export default {
 
   sum: (a, b) => a + b,
 
-  customIf: () => {
+  customIf: (condtion, options) => {
+    if(condtion) {
+      return options.fn();
+    } else {
+      return options.inverse();
+    }
+  },
 
+  isEq: (a, b) => a === b,
+
+  isGt: (a, b) => a > b,
+
+  customEach: (list, options) => {
+    const renderedHtml = [];
+    for(const item of list) {
+      renderedHtml.push(options.fn(item));
+    }
+    return renderedHtml.join('');
   }
 }

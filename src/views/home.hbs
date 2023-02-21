@@ -22,12 +22,15 @@
 <article class="dinos">
     <h2>I have dinos as best friends</h2>
     <ul>
+        {{#customEach friends}}
+            {{name}}
+        {{/customEach}}
         {{#each friends}}
             <li>
 
                 <h3>{{ name }}</h3>
 
-                {{#em}}
+                {{!-- {{#em}}
                     {{#bold}}
                         Deze tekst staat in het vet, {{firstname}}.
                     {{/bold}}
@@ -45,7 +48,16 @@
 
                 {{#if name}}
                     <h3>{{ name }}</h3>
-                {{/if}}
+                {{/if}} --}}
+
+                {{#customIf (isGt 6 4)}}
+                    Toon mijn tekst
+                {{else}}
+                    Verberg mijn tekst
+                {{/customIf}}
+
+
+
 
                 <p>Age: {{ age }}</p>
                 <img src="{{ image }}" alt="{{ name }}">
