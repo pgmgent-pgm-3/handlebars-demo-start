@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import { create } from "express-handlebars";
 import { SOURCE_PATH } from "./constants.js";
+import HandlebarsHelpers from "./lib/HandlebarsHelpers.js";
 
 // create an instance of express
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.static("public"));
 
 // ----------------- HANDLEBARS ----------------- //
 const hbs = create({
+  helpers: HandlebarsHelpers,
   extname: "hbs",
 });
 
@@ -44,7 +46,7 @@ app.get("/", (req, res) => {
         image: "/assets/images/dino_01.png",
       },
       {
-        name: "Pterodactyl",
+        name: "",
         age: 233,
         image: "/assets/images/dino_02.png",
       },

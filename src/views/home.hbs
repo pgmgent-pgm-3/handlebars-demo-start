@@ -10,7 +10,7 @@
     </blockquote>
 
     <!-- manier 1 -->
-    <p>I would like you to meet my brother: {{ person.firstname }} 
+    <p>I would like you to meet my brother: {{ person.firstname }}
     {{ person.lastname }}</p>
 
     <!-- manier 2, met een block helper #with -->
@@ -25,6 +25,22 @@
         {{#each friends}}
             <li>
                 <h3>{{ name }}</h3>
+
+                {{#em}}
+                    {{#bold}}
+                        Deze tekst staat in het vet, {{firstname}}.
+                    {{/bold}}
+                {{/em}}
+
+                {{#link "een andere tekst" "https://www.google.be" "_blank"}}{{/link}}
+
+                {{#button}}Dit is een knop{{/button}}
+
+                {{#sum 80 40}}{{/sum}}
+
+                {{#unless name}}
+                    <h3>Unknown</h3>
+                {{/unless}}
                 <p>Age: {{ age }}</p>
                 <img src="{{ image }}" alt="{{ name }}">
             </li>

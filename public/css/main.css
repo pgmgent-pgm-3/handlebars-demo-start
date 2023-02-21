@@ -12,3 +12,19 @@ h1 {
 .icon {
   font-size: 10rem;
 }
+
+/**
+ * Colors
+ */
+
+.primary {
+  background-color: brown;
+}
+
+.secondary {
+  background-color: blueviolet;
+}
+
+.tertiary {
+  background-color: coral;
+}
