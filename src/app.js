@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
         image: "/assets/images/dino_01.png",
       },
       {
-        name: "Pterodactyl",
+        name: "",
         age: 233,
         image: "/assets/images/dino_02.png",
       },

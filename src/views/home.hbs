@@ -10,7 +10,7 @@
     </blockquote>
 
     <!-- manier 1 -->
-    <p>I would like you to meet my brother: {{ person.firstname }} 
+    <p>I would like you to meet my brother: {{ person.firstname }}
     {{ person.lastname }}</p>
 
     <!-- manier 2, met een block helper #with -->
@@ -24,7 +24,9 @@
     <ul>
         {{#each friends}}
             <li>
-                <h3>{{ name }}</h3>
+                {{#if name}}
+                    <h3>{{ name }}</h3>
+                {{/if}}
                 <p>Age: {{ age }}</p>
                 <img src="{{ image }}" alt="{{ name }}">
             </li>
