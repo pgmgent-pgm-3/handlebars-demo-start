@@ -59,12 +59,12 @@ app.get("/", (req, res) => {
     nav: [
       {
         name: "Home",
-        link: "/",
+        url: "/",
         target: "_self",
       },
       {
         name: "Friends",
-        link: "/friends",
+        url: "/friends",
         target: "_blank",
       },
     ],
