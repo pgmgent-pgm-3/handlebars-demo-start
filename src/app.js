@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import { create } from "express-handlebars";
 import { PORT, VIEWS_PATH } from "./constants.js";
+import { home } from "./controllers/PagesController.js";
 
 // create an instance of express
 const app = express();
@@ -27,16 +28,7 @@ app.set("views", VIEWS_PATH); // location of the handlebars files
 
 // ------------------ End of handlebars config ------------------
 
-app.get("/", (req, res) => {
-  const data = {
-    title: "Welcome to the data-driven home page",
-    message: "This is a test",
-    names: ["John", "Jane", "Doe", "Charlie"],
-    hobbies: ["Reading", "Coding", "Gaming", "Singing"],
-  };
-  // render the home.hbs file when the /thisisatest route is accessed
-  res.render("home", data);
-});
+app.get("/", home);
 
 // start the server, listen on port defined in .env file
 app.listen(PORT, () => {
