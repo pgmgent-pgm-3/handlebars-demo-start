@@ -1,9 +1,9 @@
 // import statements
 import express from "express";
-import path from "path";
 import dotenv from "dotenv";
 dotenv.config();
 import { create } from "express-handlebars";
+import { PORT, VIEWS_PATH } from "./constants.js";
 
 // create an instance of express
 const app = express();
@@ -23,7 +23,7 @@ const hbs = create({
 // set handlebars as the view engine
 app.engine("hbs", hbs.engine);
 app.set("view engine", "hbs");
-app.set("views", path.resolve("src", "views")); // location of the handlebars files
+app.set("views", VIEWS_PATH); // location of the handlebars files
 
 // ------------------ End of handlebars config ------------------
 
@@ -39,7 +39,7 @@ app.get("/", (req, res) => {
 });
 
 // start the server, listen on port defined in .env file
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
   // callback function that is called when the server starts
-  console.log(`Application is listening to port ${process.env.PORT}.`);
+  console.log(`Application is listening to port ${PORT}.`);
 });
