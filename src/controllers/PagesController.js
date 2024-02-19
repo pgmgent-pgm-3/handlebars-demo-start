@@ -19,5 +19,5 @@ export const home = (req, res) => {
 };
 
 export const dinosaurs = (req, res) => {
-  res.render("home");
+  res.render("dinosaurs");
 };
