@@ -3,6 +3,7 @@ import express from "express";
 import path from "path";
 import dotenv from "dotenv";
 dotenv.config();
+import { create } from "express-handlebars";
 
 // create an instance of express
 const app = express();
@@ -11,9 +12,30 @@ const app = express();
 // they can be accessed from the root of the site (e.g. /assets/images/dino_07.png) 🦕
 app.use(express.static("public"));
 
-// GET route to serve the index.html file
+// ------------------ Handlebars configuration ------------------
+
+// handlebars instance
+const hbs = create({
+  extname: ".hbs",
+  defaultLayout: "main",
+});
+
+// set handlebars as the view engine
+app.engine("hbs", hbs.engine);
+app.set("view engine", "hbs");
+app.set("views", path.resolve("src", "views")); // location of the handlebars files
+
+// ------------------ End of handlebars config ------------------
+
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve("src", "views", "index.html"));
+  const data = {
+    title: "Welcome to the data-driven home page",
+    message: "This is a test",
+    names: ["John", "Jane", "Doe", "Charlie"],
+    hobbies: ["Reading", "Coding", "Gaming", "Singing"],
+  };
+  // render the home.hbs file when the /thisisatest route is accessed
+  res.render("home", data);
 });
 
 // start the server, listen on port defined in .env file
