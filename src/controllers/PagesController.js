@@ -29,5 +29,10 @@ export const dinosaurs = (req, res) => {
     { name: "Apatosaurus", image: "dino_07.png" },
     { name: "Diplodocus", image: "dino_08.png" },
   ];
-  res.render("dinosaurs", dinos);
+
+  const data = {
+    dinosaurs: dinos,
+  };
+
+  res.render("dinosaurs", data);
 };
