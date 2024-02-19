@@ -1,4 +1,24 @@
-<p>{{firstname}}</p>
-
 <h2>{{ title }}</h2>
 <p>{{ message }}</p>
+<hr>
+<!-- show person details -->
+<ul>
+    <li>{{ person.firstname }}</li>
+    <li>{{ person.lastname }}</li>
+    <li>{{ person.location.city }}</li>
+</ul>
+<!-- show details within a context -->
+<ul>
+    {{#with person}}
+        <li>{{ firstname }}</li>
+        <li>{{ lastname }}</li>
+        <li>{{ location.city }}</li>
+    {{/with}}
+</ul>
+<ul>
+    {{#each hobbies}}
+        <li>{{ this }}</li>
+    {{/each}}
+</ul>
+
+{{> footer}}

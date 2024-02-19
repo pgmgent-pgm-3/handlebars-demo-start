@@ -12,6 +12,7 @@ export const home = (req, res) => {
         country: "Belgium",
       },
     },
+    something: "<script>console.log(document.body.innerHTML);</script>",
   };
   // render the home.hbs file when the /thisisatest route is accessed
   res.render("home", data);
