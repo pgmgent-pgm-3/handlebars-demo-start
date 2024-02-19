@@ -4,6 +4,14 @@ export const home = (req, res) => {
     message: "This is a test",
     names: ["John", "Jane", "Doe", "Charlie"],
     hobbies: ["Reading", "Coding", "Gaming", "Singing"],
+    person: {
+      firstname: "Frederick",
+      lastname: "Roegiers",
+      location: {
+        city: "Ghent",
+        country: "Belgium",
+      },
+    },
   };
   // render the home.hbs file when the /thisisatest route is accessed
   res.render("home", data);
