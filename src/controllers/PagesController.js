@@ -5,7 +5,7 @@ export const home = (req, res) => {
     names: ["John", "Jane", "Doe", "Charlie"],
     hobbies: ["Reading", "Coding", "Gaming", "Singing"],
     person: {
-      firstname: "Frederick",
+      firstname: "Jeffrey",
       lastname: "Roegiers",
       location: {
         city: "Ghent",
@@ -16,4 +16,8 @@ export const home = (req, res) => {
   };
   // render the home.hbs file when the /thisisatest route is accessed
   res.render("home", data);
+};
+
+export const dinosaurs = (req, res) => {
+  res.render("home");
 };
