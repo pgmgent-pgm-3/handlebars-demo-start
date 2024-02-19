@@ -20,6 +20,7 @@ export const home = (req, res) => {
 
 export const dinosaurs = (req, res) => {
   const data = {
+    title: "Dinosaurs",
     dinosaurs: [
       { name: "Stegosaurus", image: "dino_01.png" },
       { name: "T-Rex", image: "dino_02.png" },
