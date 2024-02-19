@@ -4,9 +4,17 @@
 
 @import url("reset.css");
 
+body {
+  background-color: rgb(227, 227, 227);
+}
+
 h1 {
   color: red;
   font-size: 4rem;
+}
+
+h2 {
+  color: blue;
 }
 
 .icon {
