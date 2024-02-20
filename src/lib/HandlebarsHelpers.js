@@ -22,4 +22,9 @@ export default {
       </button>`
     );
   },
+  hyperlink: function (basepath, uri, options) {
+    const label = options.fn(this);
+    const url = `${basepath}/${uri}`;
+    return new Handlebars.SafeString(`<a href='${url}'>${label}</a>`);
+  },
 };

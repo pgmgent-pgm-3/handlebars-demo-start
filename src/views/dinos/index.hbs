@@ -8,7 +8,9 @@
         {{/unless}}
         <span></span>
         <img src="/assets/images/{{ image }}" alt="{{ name }}">
-        <a href="/dinosaurs/{{ slug }}">Read more</a>
+        {{#hyperlink "/dinosaurs" slug}}
+            read more
+        {{/hyperlink}}
     </li>
   {{/each}}
 </ul>
