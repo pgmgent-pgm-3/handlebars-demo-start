@@ -11,5 +11,9 @@ export const index = (req, res) => {
 
 // detailpagina van één dino
 export const show = (req, res) => {
-  res.send("Dino detail"); // another placeholder
+  const slug = req.params.slug;
+
+  // send the description of the dino with that slug...
+
+  res.send("Dino detail with slug: " + slug); // another placeholder
 };
