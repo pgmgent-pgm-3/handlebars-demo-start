@@ -22,21 +22,3 @@ export const home = (req, res) => {
   res.render("home", data);
 };
 
-export const dinosaurs = (req, res) => {
-  const data = {
-    title: "Dinosaurs",
-    dinosaurs: [
-      { name: "Stegosaurus", image: "dino_01.png" },
-      { name: "T-Rex", image: "dino_02.png" },
-      { name: "Velociraptor", image: "dino_03.png" },
-      { name: "Triceratops", image: "dino_04.png" },
-      { name: "Brachiosaurus", image: "dino_05.png" },
-      { name: "Pterodactyl", image: "dino_06.png" },
-      { name: "Apatosaurus", image: "dino_07.png" },
-      { name: "Diplodocus", image: "dino_08.png" },
-    ],
-    person: globalData.person,
-  };
-
-  res.render("dinosaurs", data);
-};

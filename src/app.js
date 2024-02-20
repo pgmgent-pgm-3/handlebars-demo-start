@@ -5,6 +5,7 @@ dotenv.config();
 import { create } from "express-handlebars";
 import { PORT, VIEWS_PATH } from "./constants.js";
 import { dinosaurs, home } from "./controllers/PagesController.js";
+import { index, show } from "./controllers/DinoController.js";
 
 // create an instance of express
 const app = express();
@@ -30,7 +31,10 @@ app.set("views", VIEWS_PATH); // location of the handlebars files
 
 // page routes
 app.get("/", home);
-app.get("/dinosaurs", dinosaurs);
+
+// dino routes
+app.get("/dinosaurs", index);
+app.get("/dinosaurs/:slug", show);
 
 // start the server, listen on port defined in .env file
 app.listen(PORT, () => {
