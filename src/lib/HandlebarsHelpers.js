@@ -5,7 +5,10 @@
 
 import Handlebars from "handlebars";
 
-export default {
+import handlebarsHelpers from "handlebars-helpers";
+const handyHelpers = handlebarsHelpers();
+
+const myHelpers = {
   noop: function (options) {
     return options.fn(this);
   },
@@ -28,3 +31,5 @@ export default {
     return new Handlebars.SafeString(`<a href='${url}'>${label}</a>`);
   },
 };
+
+export default { ...handyHelpers, ...myHelpers };
