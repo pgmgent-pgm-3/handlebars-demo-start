@@ -96,3 +96,7 @@ footer {
   height: 200px;
   margin: 1rem auto;
 }
+
+.btn {
+  background-color: red;
+}

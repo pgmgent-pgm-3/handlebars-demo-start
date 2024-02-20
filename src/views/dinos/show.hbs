@@ -4,12 +4,17 @@
         <div class="info">
             {{ description }}
         </div>
+        {{#bold}}
+            dit doet niks
+        {{/bold}}
         <figure>
             <img src="/assets/images/{{ image }}" alt="{{ name }}">
             <figcaption>{{ name }}</figcaption>
         </figure>
     </article>
+    {{#button "primary" "submit"}}You may press me{{/button}}
+    {{#button "secondary top" "submit"}}You may press me{{/button}}
+    {{#button "tertiary" "submit"}}You may press me{{/button}}
     <hr>
     <a href="/dinosaurs">Back to all dinosaurs</a>
 </main>
-{{> footer}}

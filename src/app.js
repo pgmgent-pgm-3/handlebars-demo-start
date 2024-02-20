@@ -6,6 +6,7 @@ import { create } from "express-handlebars";
 import { PORT, VIEWS_PATH } from "./constants.js";
 import { contact, home, privacyPolicy } from "./controllers/PageController.js";
 import { index, show } from "./controllers/DinoController.js";
+import HandlebarsHelpers from "./lib/HandlebarsHelpers.js";
 
 // create an instance of express
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.static("public"));
 const hbs = create({
   extname: ".hbs",
   defaultLayout: "main",
+  helpers: HandlebarsHelpers,
 });
 
 // set handlebars as the view engine
