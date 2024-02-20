@@ -23,6 +23,20 @@ h3 {
   margin-bottom: 1rem;
 }
 
+main {
+  background-color: white;
+  margin: 1rem 1rem 4rem 1rem;
+  padding: 1rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #353535;
+  color: white;
+}
+
 .icon {
   font-size: 10rem;
 }
