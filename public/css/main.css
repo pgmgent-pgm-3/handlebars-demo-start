@@ -6,15 +6,21 @@
 
 body {
   background-color: rgb(227, 227, 227);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h1 {
-  color: red;
-  font-size: 4rem;
+  color: #353535;
+  text-align: center;
 }
 
 h2 {
   color: blue;
+}
+
+h3 {
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
 .icon {
@@ -24,8 +30,18 @@ h2 {
 .dinos {
   list-style: none;
   display: flex;
+  flex-wrap: wrap ;
+}
+
+.dinos li {
+  text-align: center;
+  flex-basis: 40%;
+  border: 1px solid black;
+  margin: 1px;
+  padding: 1rem;
 }
 
 .dinos img {
   height: 200px;
+  margin: 0 auto;
 }
