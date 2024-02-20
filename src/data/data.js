@@ -73,7 +73,6 @@ export const dinosaurs = [
   },
   {
     id: 8,
-    isHerbivore: true,
     name: "Stegosaurus",
     slug: "stegosaurus",
     image: "dino_08.png",
@@ -88,11 +87,11 @@ export const navItems = [
     label: "Home",
   },
   {
-    url: "/contact",
-    label: "Contact",
-  },
-  {
     url: "/dinosaurs",
     label: "Dinosaurs",
+  },
+  {
+    url: "/contact",
+    label: "Contact",
   },
 ];
