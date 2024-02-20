@@ -3,7 +3,8 @@
   {{#each dinosaurs}}
     <li>
         <h3>{{ name }}</h3>
-        <img src="/assets/images/{{image}}" alt="{{ name }}">
+        <img src="/assets/images/{{ image }}" alt="{{ name }}">
+        <a href="/dinosaurs/{{ slug }}">Read more</a>
     </li>
   {{/each}}
 </ul>

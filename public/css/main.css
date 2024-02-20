@@ -30,6 +30,7 @@ h3 {
 .dinos {
   list-style: none;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap ;
 }
 
@@ -37,11 +38,12 @@ h3 {
   text-align: center;
   flex-basis: 40%;
   border: 1px solid black;
-  margin: 1px;
+  margin: 2px;
   padding: 1rem;
+  background-color: white;
 }
 
 .dinos img {
   height: 200px;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
