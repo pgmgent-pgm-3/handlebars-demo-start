@@ -1,10 +1,11 @@
-import { dinosaurs } from "../data/data.js";
+import { dinosaurs, navItems } from "../data/data.js";
 
 // overzicht van alle dino's
 export const index = (req, res) => {
   const data = {
     title: "Dinosaurs",
     dinosaurs: dinosaurs,
+    navItems,
   };
   res.render("dinos/index", data);
 };

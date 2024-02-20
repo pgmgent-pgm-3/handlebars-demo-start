@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import { create } from "express-handlebars";
 import { PORT, VIEWS_PATH } from "./constants.js";
-import { about, home, privacyPolicy } from "./controllers/PageController.js";
+import { contact, home, privacyPolicy } from "./controllers/PageController.js";
 import { index, show } from "./controllers/DinoController.js";
 
 // create an instance of express
@@ -31,7 +31,7 @@ app.set("views", VIEWS_PATH); // location of the handlebars files
 
 // page routes
 app.get("/", home);
-app.get("/about", about);
+app.get("/contact", contact);
 app.get("/privacy-policy", privacyPolicy);
 
 // dino routes

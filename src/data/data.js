@@ -1,3 +1,12 @@
+export const person = {
+  firstname: "Frederick",
+  lastname: "Roegiers",
+  location: {
+    city: "Ghent",
+    country: "Belgium",
+  },
+};
+
 export const dinosaurs = [
   {
     id: 1,
