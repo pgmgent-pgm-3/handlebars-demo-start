@@ -64,3 +64,18 @@ export const dinosaurs = [
       "The Stegosaurus is a large, plant-eating dinosaur. It has a distinctive row of large, bony plates that extend along its back and a long, spiky tail.",
   },
 ];
+
+export const navItems = [
+  {
+    url: "/",
+    label: "Home",
+  },
+  {
+    url: "/contact",
+    label: "Contact",
+  },
+  {
+    url: "/dinosaurs",
+    label: "Dinosaurs",
+  },
+];
