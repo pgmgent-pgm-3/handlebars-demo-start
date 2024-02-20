@@ -6,7 +6,7 @@ export const index = (req, res) => {
     title: "Dinosaurs",
     dinosaurs: dinosaurs,
   };
-  res.render("dinosaurs", data);
+  res.render("dinos/index", data);
 };
 
 // detailpagina van één dino
@@ -16,15 +16,11 @@ export const show = (req, res) => {
   // send the description of the dino with that slug...
   const dino = dinosaurs.find((dino) => dino.slug === slug);
 
-  if (dino) {
-    res.send(dino.description);
-  } else {
-    res
-      .status(404)
-      .send(
-        "Dino not found, however I found this diplodocus emoji 🦕. And a T-rex 🦖 rrrroaarrrr"
-      );
+  if (!dino) {
+    res.status(404).send("404 - This dino is probably extinct."); // nerdy humor
+    return;
   }
 
-  // res.send("Dino detail with slug: " + slug); // another placeholder
+  // render detail template with the dino data
+  res.render("dinos/show", dino);
 };
