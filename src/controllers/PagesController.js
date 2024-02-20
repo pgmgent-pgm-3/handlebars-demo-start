@@ -1,17 +1,21 @@
+const globalData = {
+  person: {
+    firstname: "Jeffrey",
+    lastname: "Roegiers",
+    location: {
+      city: "Ghent",
+      country: "Belgium",
+    },
+  },
+};
+
 export const home = (req, res) => {
   const data = {
     title: "Welcome to the data-driven home page",
     message: "This is a test",
     names: ["John", "Jane", "Doe", "Charlie"],
     hobbies: ["Reading", "Coding", "Gaming", "Singing"],
-    person: {
-      firstname: "Jeffrey",
-      lastname: "Roegiers",
-      location: {
-        city: "Ghent",
-        country: "Belgium",
-      },
-    },
+    person: globalData.person,
     something: "<script>console.log(document.body.innerHTML);</script>",
   };
   // render the home.hbs file when the /thisisatest route is accessed
@@ -31,6 +35,7 @@ export const dinosaurs = (req, res) => {
       { name: "Apatosaurus", image: "dino_07.png" },
       { name: "Diplodocus", image: "dino_08.png" },
     ],
+    person: globalData.person,
   };
 
   res.render("dinosaurs", data);
