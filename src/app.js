@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import { create } from "express-handlebars";
 import { PORT, VIEWS_PATH } from "./constants.js";
-import { dinosaurs, home } from "./controllers/PagesController.js";
+import { home } from "./controllers/PagesController.js";
 import { index, show } from "./controllers/DinoController.js";
 
 // create an instance of express
