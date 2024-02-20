@@ -83,6 +83,15 @@ footer {
   background-color: white;
 }
 
+.dinos li.green {
+  background-color: lightgreen;
+ }
+
+ .dinos li.red {
+  background-color: lightcoral;
+ 
+ }
+
 .dinos img {
   height: 200px;
   margin: 1rem auto;

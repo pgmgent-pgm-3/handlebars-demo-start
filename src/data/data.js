@@ -10,6 +10,7 @@ export const person = {
 export const dinosaurs = [
   {
     id: 1,
+    isHerbivore: true,
     name: "Edaphosaurus",
     slug: "edaphosaurus",
     image: "dino_01.png",
@@ -19,6 +20,7 @@ export const dinosaurs = [
   {
     id: 2,
     name: "Pterodactyl",
+    isHerbivore: false,
     slug: "pterodactyl",
     image: "dino_02.png",
     description:
@@ -27,6 +29,7 @@ export const dinosaurs = [
   {
     id: 3,
     name: "Xenoceratops",
+    isHerbivore: true,
     slug: "xenoceratops",
     image: "dino_03.png",
     description:
@@ -35,6 +38,7 @@ export const dinosaurs = [
   {
     id: 4,
     name: "Spinosaurus",
+    isHerbivore: false,
     slug: "spinosaurus",
     image: "dino_04.png",
     description:
@@ -43,6 +47,7 @@ export const dinosaurs = [
   {
     id: 5,
     name: "Diplodocus",
+    isHerbivore: true,
     slug: "diplodocus",
     image: "dino_05.png",
     description:
@@ -50,6 +55,7 @@ export const dinosaurs = [
   },
   {
     id: 6,
+    isHerbivore: true,
     name: "Parasaur",
     slug: "parasaur",
     image: "dino_06.png",
@@ -58,6 +64,7 @@ export const dinosaurs = [
   },
   {
     id: 7,
+    isHerbivore: true,
     name: "Brontosaurus",
     slug: "brontosaurus",
     image: "dino_07.png",
@@ -66,6 +73,7 @@ export const dinosaurs = [
   },
   {
     id: 8,
+    isHerbivore: true,
     name: "Stegosaurus",
     slug: "stegosaurus",
     image: "dino_08.png",

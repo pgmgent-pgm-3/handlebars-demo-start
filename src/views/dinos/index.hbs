@@ -1,8 +1,12 @@
 <h1>{{ title }}</h1><script></script>
 <ul class="dinos">
   {{#each dinosaurs}}
-    <li>
+    <li {{#if isHerbivore }} class="green" {{else}} class="red" {{/if}}>
         <h3>{{ name }}</h3>
+        {{#unless isHerbivore}}
+            <p>Not a herbivore</p>
+        {{/unless}}
+        <span></span>
         <img src="/assets/images/{{ image }}" alt="{{ name }}">
         <a href="/dinosaurs/{{ slug }}">Read more</a>
     </li>
